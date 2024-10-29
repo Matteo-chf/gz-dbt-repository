@@ -1,6 +1,6 @@
 SELECT
-date_date
 orders_id,
+date_date,
 pdt_id,
 quantity,
 revenue,
