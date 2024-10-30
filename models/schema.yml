@@ -49,4 +49,87 @@ sources:
              description: the cost of preparing the parcel in the distribution centre/warehouse
            - name: ship_cost
              description: shipping cost paid by Greenweez to the carrier/logistics provider
-
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: criteo campaign
+        columns:
+          - name: date_date
+            description: PK avec campaign key
+          - name: paid_source
+            description: name of advertiser
+          - name: campaign_key
+            description: PK avec date_date
+          - name: camPGN_name
+            description: nom de la campaign
+          - name: ads_cost
+            description: cout de publicité
+          - name: impression
+            description: nombre de mails générés
+          - name: click
+            description: nombre de clicks
+        tests:
+           - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: adwords campaign
+        columns:
+          - name: date_date
+            description: PK avec campaign key
+          - name: paid_source
+            description: name of advertiser
+          - name: campaign_key
+            description: PK avec date_date
+          - name: camPGN_name
+            description: nom de la campaign
+          - name: ads_cost
+            description: cout de publicité
+          - name: impression
+            description: nombre de mails générés
+          - name: click
+            description: nombre de clicks
+        tests:
+           - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+      - name: bing
+        identifier: raw_gz_bing
+        description: bing campaign
+        columns:
+          - name: date_date
+            description: PK avec campaign key
+          - name: paid_source
+            description: name of advertiser
+          - name: campaign_key
+            description: PK avec date_date
+          - name: camPGN_name
+            description: nom de la campaign
+          - name: ads_cost
+            description: cout de publicité
+          - name: impression
+            description: nombre de mails générés
+          - name: click
+            description: nombre de clicks
+        tests:
+           - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: facebook campaign
+        columns:
+          - name: date_date
+            description: PK avec campaign key
+          - name: paid_source
+            description: name of advertiser
+          - name: campaign_key
+            description: PK avec date_date
+          - name: camPGN_name
+            description: nom de la campaign
+          - name: ads_cost
+            description: cout de publicité
+          - name: impression
+            description: nombre de mails générés
+          - name: click
+            description: nombre de clicks
+        tests:
+           - unique:
+              column_name: "(date_date || '-' || campaign_key)"
